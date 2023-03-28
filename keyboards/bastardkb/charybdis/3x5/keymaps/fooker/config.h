@@ -10,3 +10,12 @@
 #define SPLIT_LAYER_STATE_ENABLE
 #define SPLIT_MODS_ENABLE
 
+#define PMW33XX_CPI 200
+
+#ifdef FOOKER_COLOR_B
+	#define FOOKER_GLOW 45, 255, 255
+#endif
+#ifdef FOOKER_COLOR_W
+	#define FOOKER_GLOW 20, 255, 255
+#endif
+

@@ -208,7 +208,7 @@ bool rgb_matrix_indicators_user(void) {
 void keyboard_post_init_user(void) {
 	// Enables RGB, without saving settings
 	rgb_matrix_enable_noeeprom();
-	rgb_matrix_sethsv_noeeprom(20, 255, 255);
+	rgb_matrix_sethsv_noeeprom(FOOKER_GLOW);
 	rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS);
 	rgb_matrix_set_speed_noeeprom(100);
 }

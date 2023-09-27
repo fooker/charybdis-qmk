@@ -155,50 +155,50 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 	}
 }
 
-bool rgb_matrix_indicators_user(void) {
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
 	if (get_mods() & MOD_MASK_SHIFT) {
-		rgb_matrix_set_color(33, 255, 0, 0);
-		rgb_matrix_set_color(17, 255, 0, 0);
-		rgb_matrix_set_color(15, 255, 0, 0);
-		rgb_matrix_set_color(16, 255, 0, 0);
-		rgb_matrix_set_color(34, 255, 0, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(33, 255, 0, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(17, 255, 0, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(15, 255, 0, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(16, 255, 0, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(34, 255, 0, 0);
 		return true;
 	}
-		
+
 	if (layer_state_is(1)) { // SYMBOLS
-		rgb_matrix_set_color(16, 225, 213, 0);
-		rgb_matrix_set_color(15, 225, 213, 0);
-		rgb_matrix_set_color(17, 225, 213, 0);
-		rgb_matrix_set_color(33, 225, 213, 0);
-		rgb_matrix_set_color(34, 225, 213, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(16, 225, 213, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(15, 225, 213, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(17, 225, 213, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(33, 225, 213, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(34, 225, 213, 0);
 		return true;
 	}
 
 	if (layer_state_is(2)) { // MOUSE
-		rgb_matrix_set_color(15, 155, 0, 255);
-		rgb_matrix_set_color(16, 155, 0, 255);
-		rgb_matrix_set_color(17, 155, 0, 255);
-		rgb_matrix_set_color(33, 155, 0, 255);
-		rgb_matrix_set_color(34, 155, 0, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(15, 155, 0, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(16, 155, 0, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(17, 155, 0, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(33, 155, 0, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(34, 155, 0, 255);
 		return true;
 	}
 
 	if (layer_state_is(3)) { // NAVIGATION
-		rgb_matrix_set_color(34, 84, 255, 0);
-		rgb_matrix_set_color(15, 84, 255, 0);
-		rgb_matrix_set_color(16, 84, 255, 0);
-		rgb_matrix_set_color(17, 84, 255, 0);
-		rgb_matrix_set_color(33, 84, 255, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(34, 84, 255, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(15, 84, 255, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(16, 84, 255, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(17, 84, 255, 0);
+		RGB_MATRIX_INDICATOR_SET_COLOR(33, 84, 255, 0);
 		return true;
 	}
 
 	if (layer_state_is(4)) { // NUMBERS
-		rgb_matrix_set_color(17, 0, 234, 255);
-		rgb_matrix_set_color(15, 0, 234, 255);
-		rgb_matrix_set_color(16, 0, 234, 255);
-		rgb_matrix_set_color(33, 0, 234, 255);
-		rgb_matrix_set_color(34, 0, 234, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(17, 0, 234, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(15, 0, 234, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(16, 0, 234, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(33, 0, 234, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(34, 0, 234, 255);
 		return true;
 	}
 

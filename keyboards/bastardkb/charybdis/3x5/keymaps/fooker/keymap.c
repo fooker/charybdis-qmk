@@ -42,11 +42,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
        DE_Y   , DE_X   , DE_C   , DE_V   , DE_B   ,    DE_N   , DE_M   , DE_COMM,  DE_DOT, DE_MINS,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                MO(2), LT(1,KC_SPC), LT(4,KC_BSPC),   LT(3,KC_TAB),LSFT_T(KC_ENT)
+                MO(3), LT(2,KC_SPC), LT(5,KC_BSPC),   LT(4,KC_TAB),LSFT_T(KC_ENT)
   //           ╰───────────────────────────────────╯ ╰───────────────────────────╯
   ),
 
   [1] = LAYOUT_charybdis_3x5(
+  // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+       DE_Q   , DE_W   , DE_E   , DE_R   , DE_T   ,    DE_Z   , DE_U   , DE_I   , DE_O   , DE_P   ,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+       DE_A   , DE_S   , DE_D   , DE_F   , DE_G   ,    DE_H   , DE_J   , DE_K   , DE_L   , DE_COLN,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+       DE_Y   , DE_X   , DE_C   , DE_V   , DE_B   ,    DE_N   , DE_M   , DE_COMM, DE_DOT , DE_MINS,
+  // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+                         MO(3)  , KC_SPC , MO(5)  ,   LT(4,KC_TAB), KC_ENT
+  //                   ╰───────────────────────────╯ ╰────────────────────╯
+  ),
+
+  [2] = LAYOUT_charybdis_3x5(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
        DE_EXLM, DE_AT  , DE_LCBR, DE_RCBR, DE_GRV ,    DE_QUOT, DE_UDIA, DE_CIRC, DE_ODIA, DE_ASTR,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
@@ -58,9 +70,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                   ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
-  [2] = LAYOUT_charybdis_3x5(
+  [3] = LAYOUT_charybdis_3x5(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-       _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______,
+       KC_ESC , _______, _______, _______, _______,    _______, _______, _______, _______, _______,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
        KC_LALT, KC_LCTL, KC_LGUI, KC_LSFT, _______,    KC_BTN4, KC_BTN1, KC_BTN3, KC_BTN2, KC_BTN5,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
@@ -70,31 +82,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                   ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
-  [3] = LAYOUT_charybdis_3x5(
+  [4] = LAYOUT_charybdis_3x5(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
        _______, _______, _______, _______, _______,    KC_DEL , KC_PGUP, KC_UP  , KC_PGDN, KC_INS ,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
        KC_LALT, KC_LCTL, KC_LGUI, KC_LSFT, _______,    KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END ,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       _______, _______, _______, _______, _______,    _______, _______, _______, _______, TG(2)  ,
+       _______, _______, _______, _______, _______,    _______, _______, _______, _______, TG(3)  ,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          _______, KC_BSPC, KC_DEL ,    _______, XXXXXXX
   //                   ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
-  [4] = LAYOUT_charybdis_3x5(
+  [5] = LAYOUT_charybdis_3x5(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
        KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  ,    KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 ,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
       LA(KC_1),LC(KC_2),LG(KC_3),LS(KC_4), KC_5   ,    KC_6   ,RS(KC_7),RG(KC_8),RC(KC_9),RA(KC_0),
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       _______, _______, _______, DE_COLN, DE_DOT ,    _______, _______, _______, _______, _______,
+       TG(1)  , _______, _______, DE_COLN, DE_DOT ,    _______, _______, _______, _______, _______,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          XXXXXXX, XXXXXXX, _______,    DE_BSLS, _______
   //                   ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
-//  [5] = LAYOUT_charybdis_3x5(
+//  [6] = LAYOUT_charybdis_3x5(
 //  // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
 //       _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______,
 //  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
@@ -166,7 +178,16 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 		return true;
 	}
 
-	if (layer_state_is(1)) { // SYMBOLS
+	if (layer_state_is(1)) { // GAMING
+		RGB_MATRIX_INDICATOR_SET_COLOR(17, 0, 0, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(15, 0, 0, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(16, 0, 0, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(33, 0, 0, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(34, 0, 0, 255);
+		return true;
+	}
+
+	if (layer_state_is(2)) { // SYMBOLS
 		RGB_MATRIX_INDICATOR_SET_COLOR(16, 225, 213, 0);
 		RGB_MATRIX_INDICATOR_SET_COLOR(15, 225, 213, 0);
 		RGB_MATRIX_INDICATOR_SET_COLOR(17, 225, 213, 0);
@@ -175,7 +196,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 		return true;
 	}
 
-	if (layer_state_is(2)) { // MOUSE
+	if (layer_state_is(3)) { // MOUSE
 		RGB_MATRIX_INDICATOR_SET_COLOR(15, 155, 0, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(16, 155, 0, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(17, 155, 0, 255);
@@ -184,7 +205,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 		return true;
 	}
 
-	if (layer_state_is(3)) { // NAVIGATION
+	if (layer_state_is(4)) { // NAVIGATION
 		RGB_MATRIX_INDICATOR_SET_COLOR(34, 84, 255, 0);
 		RGB_MATRIX_INDICATOR_SET_COLOR(15, 84, 255, 0);
 		RGB_MATRIX_INDICATOR_SET_COLOR(16, 84, 255, 0);
@@ -193,7 +214,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 		return true;
 	}
 
-	if (layer_state_is(4)) { // NUMBERS
+	if (layer_state_is(5)) { // NUMBERS
 		RGB_MATRIX_INDICATOR_SET_COLOR(17, 0, 234, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(15, 0, 234, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(16, 0, 234, 255);

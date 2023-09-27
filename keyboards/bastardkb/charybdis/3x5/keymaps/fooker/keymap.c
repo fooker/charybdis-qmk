@@ -143,7 +143,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 
 
 
-bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
+uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
 		case LA(DE_A):
 		case LC(DE_S):
@@ -159,11 +159,11 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 		case RS(KC_7):
 		case RG(KC_8):
 		case RC(KC_9):
-		case LT(1,KC_SPC):
+		case LT(2,KC_SPC):
 		case LSFT_T(KC_ENT):
-			return true;
+			return 0;
 		default:
-			return false;
+            return QUICK_TAP_TERM;
 	}
 }
 

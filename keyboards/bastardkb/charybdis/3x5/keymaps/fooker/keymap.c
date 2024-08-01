@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
        DE_ADIA, DE_SS  , DE_LPRN, DE_RPRN, DE_PLUS,    DE_DQUO, DE_EQL , DE_DLR , DE_HASH, DE_SCLN,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       DE_PIPE, DE_PERC, DE_LBRC, DE_RBRC, DE_TILD,    DE_AMPR, DE_LABK, DE_RABK, DE_QUES, DE_UNDS,
+       DE_PIPE, DE_AMPR, DE_LBRC, DE_RBRC, DE_TILD,    DE_PERC, DE_LABK, DE_RABK, DE_QUES, DE_UNDS,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                          XXXXXXX, _______, XXXXXXX,    DE_SLSH, KC_RSFT
   //                   ╰───────────────────────────╯ ╰──────────────────╯

@@ -171,7 +171,7 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
 		case RS(KC_7):
 		case RG(KC_8):
 		case RC(KC_9):
-		case LT(2,KC_SPC):
+		case LT(3,KC_SPC):
 		case LSFT_T(KC_ENT):
 			return 0;
 		default:
@@ -190,7 +190,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 		return true;
 	}
 
-	if (layer_state_is(1)) { // GAMING
+	if (layer_state_is(2)) { // GAMING
 		RGB_MATRIX_INDICATOR_SET_COLOR(17, 0, 0, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(15, 0, 0, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(16, 0, 0, 255);
@@ -199,7 +199,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 		return true;
 	}
 
-	if (layer_state_is(2)) { // SYMBOLS
+	if (layer_state_is(3)) { // SYMBOLS
 		RGB_MATRIX_INDICATOR_SET_COLOR(16, 225, 213, 0);
 		RGB_MATRIX_INDICATOR_SET_COLOR(15, 225, 213, 0);
 		RGB_MATRIX_INDICATOR_SET_COLOR(17, 225, 213, 0);
@@ -208,7 +208,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 		return true;
 	}
 
-	if (layer_state_is(3)) { // MOUSE
+	if (layer_state_is(4)) { // MOUSE
 		RGB_MATRIX_INDICATOR_SET_COLOR(15, 155, 0, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(16, 155, 0, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(17, 155, 0, 255);
@@ -217,7 +217,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 		return true;
 	}
 
-	if (layer_state_is(4)) { // NAVIGATION
+	if (layer_state_is(5)) { // NAVIGATION
 		RGB_MATRIX_INDICATOR_SET_COLOR(34, 84, 255, 0);
 		RGB_MATRIX_INDICATOR_SET_COLOR(15, 84, 255, 0);
 		RGB_MATRIX_INDICATOR_SET_COLOR(16, 84, 255, 0);
@@ -226,12 +226,21 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 		return true;
 	}
 
-	if (layer_state_is(5)) { // NUMBERS
+	if (layer_state_is(6)) { // NUMBERS
 		RGB_MATRIX_INDICATOR_SET_COLOR(17, 0, 234, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(15, 0, 234, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(16, 0, 234, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(33, 0, 234, 255);
 		RGB_MATRIX_INDICATOR_SET_COLOR(34, 0, 234, 255);
+		return true;
+	}
+
+	if (layer_state_is(7)) { // SETTINGS
+		RGB_MATRIX_INDICATOR_SET_COLOR(17, 255, 255, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(15, 255, 255, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(16, 255, 255, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(33, 255, 255, 255);
+		RGB_MATRIX_INDICATOR_SET_COLOR(34, 255, 255, 255);
 		return true;
 	}
 
